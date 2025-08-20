@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <import type="com.emojigame.core.ui.Theme" />
+        <variable name="theme" type="com.emojigame.core.ui.Theme" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/icon_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <!--Loop button-->
+        <ImageView
+            android:id="@+id/loop_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/switch_icon_background"
+            android:src="@drawable/loop"
+            android:contentDescription="@string/loop_icon_description" />
+
+        <!--If/Else button-->
+        <ImageView
+            android:id="@+id/if_else_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/switch_icon_background"
+            android:src="@drawable/if_else"
+            android:contentDescription="@string/if_else_icon_description" />
+
+        <!--Sequence button-->
+        <ImageView
+            android:id="@+id/sequence_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/switch_icon_background"
+            android:src="@drawable/sequence"
+            android:contentDescription="@string/loop_icon_description" />
+    </LinearLayout>
+</layout>

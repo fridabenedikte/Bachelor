@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.emojigame.core.ui.Theme" />
+        <variable name="theme" type="com.emojigame.core.ui.Theme" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/input_fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{theme.inputBackgroundColor}"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="0dp" >
+
+        <!-- Command-bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" >
+
+            <HorizontalScrollView
+                android:id="@+id/command_bar_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:background="@{theme.backgroundColor}"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:id="@+id/command_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:clipChildren="false"
+                    android:clipToPadding="false" />
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- Library bar -->
+        <include layout="@layout/include_library_bar"
+            android:id="@+id/library_bar_inclusion"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <!-- Play button -->
+        <include layout="@layout/include_play_button"
+            android:id="@+id/play_button_inclusion"/>
+    </LinearLayout>
+</layout>

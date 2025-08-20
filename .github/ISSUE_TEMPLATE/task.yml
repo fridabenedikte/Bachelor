@@ -1,0 +1,61 @@
+name: ✅ Task
+description: Create a new task for the project (e.g., testing, documentation, refactoring).
+title: "[Task] <Short Description>"
+labels: [task] # You can add more specific labels like 'testing', 'documentation', 'refactor' as needed
+projects: ["EmojiBachelor/Zedge Emoji App"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Task Description
+        Please describe the task in detail.
+
+  - type: textarea
+    id: task_description
+    attributes:
+      label: Description
+      description: A clear and concise description of the task that needs to be done.
+      placeholder: "Add details here..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task_type
+    attributes:
+      label: Type of Task
+      description: What kind of task is this?
+      options:
+        - Testing
+        - Documentation
+        - Refactoring
+        - Bug Fix (if it's a specific fix not requiring a full bug report)
+        - Code Review
+        - Research
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: specific_details
+    attributes:
+      label: Specific Details
+      description: Provide any specific instructions, areas of focus, or goals for this task.
+      placeholder: "For testing, specify the module or feature to test. For documentation, specify the area to document. etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria (Optional)
+      description: Define what needs to be accomplished for this task to be considered complete.
+      placeholder: "e.g., All unit tests pass, Documentation for API endpoint X is written, Code in module Y has been refactored."
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any extra details, references, or related issues.
+      placeholder: "Links to relevant issues, design documents, or code sections."

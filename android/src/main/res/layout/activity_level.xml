@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <!--PORTRAIT MODE-->
+
+    <data>
+        <import type="com.emojigame.core.ui.Theme"/>
+        <variable name="theme" type="com.emojigame.core.ui.Theme"/>
+    </data>
+
+    <!--Game & Overlay+animation-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Game content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/puzzle_top_bar_inset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@{theme.backgroundColor}" />
+
+            <!--Puzzle fragment group-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <!--Puzzle fragment-->
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/puzzle_fragment_container"
+                    android:name="com.emojigame.android.ui.fragments.PuzzleFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+
+                <!--Input Switch fragment-->
+
+                <!--Overlay buttons-->
+                <include
+                    layout="@layout/include_button_bar"
+                    android:id="@+id/button_bar"
+                    android:tag="@{null}"
+                    bind:theme="@{theme}"
+                    />
+            </FrameLayout>
+
+            <!--Input fragment group-->
+            <FrameLayout
+                android:id="@+id/input_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@{theme.inputBackgroundColor}" >
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sequence_input_fragment"
+                    android:name="com.emojigame.android.ui.fragments.InputSequenceFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"/>
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/loop_input_fragment"
+                    android:name="com.emojigame.android.ui.fragments.InputLoopFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/if_else_input_fragment"
+                    android:name="com.emojigame.android.ui.fragments.InputIfElseFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/gestureInputBackground"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@{theme.inputBackgroundColor}" />
+        </LinearLayout>
+
+        <!--Animation-->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:background="@android:color/transparent"
+            app:lottie_rawRes="@raw/animation_stars"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false" />
+
+        <!-- Tutorial overlay container -->
+        <FrameLayout
+            android:id="@+id/tutorial_overlay_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,21 @@
+DEFAULT: Loading -> Main Menu
+
+Main Menu -> Settings
+Main Menu -> Level select
+Main Menu -> Playing
+
+Level select -> Settings
+Level select -> Playing
+
+Settings -> return
+
+Playing -> Paused
+Playing -> Game over (?)
+Playing -> Playing (Reset)
+
+Paused -> return
+Paused -> Settings
+
+This was just an early attempt to conseptualize the transitions to understand whether we would need
+a complex state handling system or not. If we can do linear transitions, we could simply pop/push to
+a stack. Idk, we'll see.

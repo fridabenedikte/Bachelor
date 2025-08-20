@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.emojigame.core.ui.Theme" />
+        <variable name="theme" type="com.emojigame.core.ui.Theme" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/input_fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@{theme.inputBackgroundColor}"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="0dp" >
+
+        <!--The emoji wheel-->
+        <FrameLayout
+            android:id="@+id/emoji_wheel_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:background="@drawable/wheel_background" >
+
+            <!-- Group of slots -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/emoji_wheel_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Center circle -->
+                <TextView
+                    android:id="@+id/wheel_center"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:text=""
+                    android:background="@drawable/center_circle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+        <!-- Library bar -->
+        <include layout="@layout/include_library_bar"
+            android:id="@+id/library_bar_inclusion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Play button -->
+        <include layout="@layout/include_play_button"
+            android:id="@+id/play_button_inclusion"/>
+    </LinearLayout>
+</layout>

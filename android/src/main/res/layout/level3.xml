@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF8FF">
+
+    <!-- Sol (valgfri bakgrunn) -->
+    <ImageView
+        android:id="@+id/sun"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/background_sun"
+        android:src="@drawable/contrast"
+        android:tag="background:sun:enabled:drawable/contrast"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <!-- Gress venstre -->
+    <View
+        android:id="@+id/grass_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:ground:enabled:grass-left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- Elv 1 -->
+    <View
+        android:id="@+id/river_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="background:water:enabled:river-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/grass_left"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- Gress midt -->
+    <View
+        android:id="@+id/grass_middle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:ground:enabled:grass-middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/river_1"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- Elv 2 -->
+    <View
+        android:id="@+id/river_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="background:water:enabled:river-2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/grass_middle"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- Gress høyre -->
+    <View
+        android:id="@+id/grass_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:ground:enabled:grass-right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/river_2"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- Bro 1 -->
+    <View
+        android:id="@+id/bridge_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:bridge:disabled:bridge-1"
+        app:layout_constraintStart_toStartOf="@id/river_1"
+        app:layout_constraintEnd_toEndOf="@id/river_1"
+        app:layout_constraintTop_toTopOf="@id/river_1"
+        app:layout_constraintHeight_percent="0.04" />
+
+    <!-- Bro 2 -->
+    <View
+        android:id="@+id/bridge_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:bridge:disabled:bridge-2"
+        app:layout_constraintStart_toStartOf="@id/river_2"
+        app:layout_constraintEnd_toEndOf="@id/river_2"
+        app:layout_constraintTop_toTopOf="@id/river_2"
+        app:layout_constraintHeight_percent="0.04" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

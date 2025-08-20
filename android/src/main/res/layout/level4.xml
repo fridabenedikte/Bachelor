@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF8FF">
+
+    <!-- Sun -->
+    <ImageView
+        android:id="@+id/sun"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="Sun"
+        android:src="@drawable/contrast"
+        android:tag="background:sun:enabled:drawable/contrast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Grass left (1) -->
+    <View
+        android:id="@+id/grass_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:ground:enabled:ground-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- River 1 -->
+    <View
+        android:id="@+id/river_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="background:water:enabled:river-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/grass_1"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- Grass 2 -->
+    <View
+        android:id="@+id/grass_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:ground:enabled:ground-2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/river_1"
+        app:layout_constraintWidth_percent="0.1"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- River 2 -->
+    <View
+        android:id="@+id/river_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="background:water:enabled:river-2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/grass_2"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- Grass 3 -->
+    <View
+        android:id="@+id/grass_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:ground:enabled:ground-3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/river_2"
+        app:layout_constraintWidth_percent="0.1"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- River 3 -->
+    <View
+        android:id="@+id/river_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="background:water:enabled:river-3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/grass_3"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- Grass right (4) -->
+    <View
+        android:id="@+id/grass_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:ground:enabled:ground-4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/river_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.1"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <!-- Bridge 1 -->
+    <View
+        android:id="@+id/bridge_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:bridge:disabled:bridge-1"
+        app:layout_constraintTop_toTopOf="@id/river_1"
+        app:layout_constraintStart_toStartOf="@id/river_1"
+        app:layout_constraintEnd_toEndOf="@id/river_1"
+        app:layout_constraintHeight_percent="0.04" />
+
+    <!-- Bridge 2 -->
+    <View
+        android:id="@+id/bridge_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:bridge:disabled:bridge-2"
+        app:layout_constraintTop_toTopOf="@id/river_2"
+        app:layout_constraintStart_toStartOf="@id/river_2"
+        app:layout_constraintEnd_toEndOf="@id/river_2"
+        app:layout_constraintHeight_percent="0.04" />
+
+    <!-- Bridge 3 -->
+    <View
+        android:id="@+id/bridge_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:tag="platform:bridge:disabled:bridge-3"
+        app:layout_constraintTop_toTopOf="@id/river_3"
+        app:layout_constraintStart_toStartOf="@id/river_3"
+        app:layout_constraintEnd_toEndOf="@id/river_3"
+        app:layout_constraintHeight_percent="0.04" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">MojiFlow</string>
+    <string name="background_desc">A background image</string>
+    <string name="loading">Loading…</string>
+    <string name="main_menu_title">Main Menu</string>
+    <string name="start_game">Start Game</string>
+    <string name="settings">Settings</string>
+    <string name="exit">Exit</string>
+    <string name="connecting_to_core">Connecting to core…</string>
+    <string name="failed_connection_core">Failed to connect to core!</string>
+    <string name="loading_complete">Loading complete :)</string>
+    <string name="starting_core">Starting core service</string>
+    <string name="retry_level">Try again</string>
+    <string name="play">Play</string>
+    <string name="puzzle_game">Puzzle Game</string>
+    <string name="game_ended">Level complete</string>
+    <string name="you_won">You won!</string>
+    <string name="try_again">Try again</string>
+    <string name="return_to_menu">Return to menu</string>
+    <string name="next_level">Next Level</string>
+    <string name="you_won_emoji">You won! 🎉</string>
+    <string name="app_logo_title">MOJIFLOW</string>
+
+    <string name="choose_level">choose level</string>
+    <string name="level_1">Level 1</string>
+    <string name="level_n">Level %1$d</string>
+    <string name="hint">Hint</string>
+    <string name="toggle_music">toggle music</string>
+    <string name="background_sun">Background-sun</string>
+    <string name="hide_wheel">Hide wheel</string>
+    <string name="show_wheel">Show wheel</string>
+    <string name="game_over">Game Over!</string>
+    <string name="you_lost_try_again">Try again! 💔</string>
+    <string name="loop_icon_description">Icon that lets the user switch to the loop input fragment</string>
+    <string name="if_else_icon_description">Icon that lets the user switch to the if/else input fragment</string>
+    <string name="sequence_icon_description">Icon that lets the user switch to the sequence input fragment</string>
+    <string name="pause">pause\n</string>
+    <string name="close">close</string>
+    <string name="reset_tutorial">Reset Tutorial</string>
+    <string name="mute_music">Mute Music</string>
+    <string name="play_music">Play Music</string>
+
+</resources>

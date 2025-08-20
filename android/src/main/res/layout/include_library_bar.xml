@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.emojigame.core.ui.Theme"/>
+        <variable name="theme" type="com.emojigame.core.ui.Theme"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <HorizontalScrollView
+            android:id="@+id/library_bar_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/library_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</layout>

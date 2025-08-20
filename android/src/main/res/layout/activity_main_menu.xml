@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.emojigame.core.ui.Theme"/>
+        <variable name="theme" type="com.emojigame.core.ui.Theme"/>
+    </data>
+
+    <FrameLayout
+        android:id="@+id/mainMenuPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/background_desc"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/forest_backgrounds_outdoors" />
+
+        <!-- Music toggle button in top right corner -->
+        <ImageButton
+            android:id="@+id/btnMusicToggle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="16dp"
+            android:background="@drawable/music_button_background"
+            android:contentDescription="@string/toggle_music"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:src="@drawable/music_on" />
+
+        <!-- Foreground UI -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <!-- Big retro title -->
+            <TextView
+                android:id="@+id/gameLogoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_logo_title"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:textColor="@{theme.textColor}"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Subheading -->
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_menu_title"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@{theme.inputBackgroundColor}"
+                android:fontFamily="monospace"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Buttons -->
+            <Button
+                android:id="@+id/btnStartGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_game"
+                android:background="@{theme.buttonColor}"
+                android:textColor="@{theme.backgroundColor}"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@{theme.buttonColor}"
+                android:textColor="@{theme.backgroundColor}"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:text="@string/settings"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@{theme.buttonColor}"
+                android:textColor="@{theme.backgroundColor}"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:text="@string/exit"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </FrameLayout>
+</layout>

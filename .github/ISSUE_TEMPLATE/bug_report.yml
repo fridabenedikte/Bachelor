@@ -1,0 +1,62 @@
+name: Bug Report
+description: Report an issue or unexpected behavior in the game.
+title: "[Bug] <Short Description>"
+labels: [bug]
+projects: ["EmojiBachelor/Zedge Emoji App"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+        Please provide as much detail as possible.
+
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is.
+      placeholder: "Add details here..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide the exact steps to reproduce the bug.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See the error.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe what should happen instead.
+      placeholder: "The game should..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: system_info
+    attributes:
+      label: System Information
+      description: Provide details about your setup.
+      placeholder: |
+        - **Game Version:** `vX.X.X`
+        - **Android Device:** `<Model>`
+        - **OS Version:** `<Android Version>`
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any extra details, references, or screenshots.
+      placeholder: "Links, logs, screenshots, or additional notes..."

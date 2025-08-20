@@ -1,0 +1,13 @@
+<resources>
+    <!-- Størrelse på nivåknapper -->
+    <dimen name="level_button_size">64dp</dimen>
+    <dimen name="level_button_margin">12dp</dimen>
+
+    <!-- Størrelse og avstand for stiforbindelsene -->
+    <dimen name="path_height">20dp</dimen>
+    <dimen name="path_margin">8dp</dimen>
+    <dimen name="path_spacing">10dp</dimen>
+
+    <!-- Padding for layout -->
+    <dimen name="activity_padding">16dp</dimen>
+</resources>

@@ -1,0 +1,40 @@
+name: General Issue
+description: Open a general issue that doesn’t fit into bugs or features.
+title: "[General] <Short Description>"
+labels: [task]
+projects: ["EmojiBachelor/Zedge Emoji App"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## General Issue
+        Please describe the issue in detail.
+
+  - type: textarea
+    id: issue_summary
+    attributes:
+      label: Description
+      description: A short description of the issue or request.
+      placeholder: "Add details here..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: task_breakdown
+    attributes:
+      label: Task Breakdown
+      description: List steps or subtasks if applicable.
+      placeholder: |
+        - [ ] Step 1
+        - [ ] Step 2
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any extra details, references, or screenshots.
+      placeholder: "Links, references, or additional notes..."

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.emojigame.core.ui.Theme" />
+
+        <variable
+            name="theme"
+            type="com.emojigame.core.ui.Theme" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/dialog_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@{theme.inputBackgroundColor}"
+        android:elevation="8dp"
+        android:layout_gravity="center"
+        android:layout_margin="32dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/game_ended"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@{theme.backgroundColor}"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/you_won_emoji"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textColor="@{theme.backgroundColor}"
+            android:paddingBottom="24dp" />
+
+        <!-- Resume -->
+        <LinearLayout
+            android:id="@+id/btnResume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@{theme.buttonColor}"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_played"
+                app:tint="@{theme.textColor}" />
+
+            <TextView
+                android:layout_marginStart="8dp"
+                android:text="Resume"
+                android:textColor="@{theme.textColor}"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+        </LinearLayout>
+
+        <!-- Next Level -->
+        <LinearLayout
+            android:id="@+id/btnNextLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@{theme.buttonColor}"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_next"
+                app:tint="@{theme.textColor}" />
+
+            <TextView
+                android:layout_marginStart="8dp"
+                android:text="@string/next_level"
+                android:textColor="@{theme.textColor}"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+        </LinearLayout>
+
+        <!-- Return to Menu -->
+        <LinearLayout
+            android:id="@+id/btnReturnToMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@{theme.backgroundColor}"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home"
+                app:tint="@{theme.textColor}" />
+
+            <TextView
+                android:layout_marginStart="8dp"
+                android:text="Menu"
+                android:textColor="@{theme.textColor}"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+        </LinearLayout>
+
+        <!-- Try Again -->
+        <LinearLayout
+            android:id="@+id/btnTryAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@{theme.backgroundColor}"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_retry"
+                app:tint="@{theme.textColor}" />
+
+            <TextView
+                android:layout_marginStart="8dp"
+                android:text="Try Again"
+                android:textColor="@{theme.textColor}"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
